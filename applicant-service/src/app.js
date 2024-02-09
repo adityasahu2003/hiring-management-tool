@@ -8,5 +8,5 @@ const app = express();
 connectDB();
 app.use(express.json());
 app.use('/api/applicant', applicantRoutes);
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.APPLICANT_PORT;
 app.listen(PORT, () => console.log(`Applicant service running on port ${PORT}`));
