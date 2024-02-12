@@ -1,0 +1,54 @@
+/* button.css */
+.button {
+    /* Common button styles */
+    padding: 0.8rem 1rem;
+    border: none;
+    cursor: pointer;
+    margin: 1rem;
+    text-align: center;
+    font-size: medium;
+    border-radius: 2rem;
+    transition: transform 0.5s ease;
+    /* Add any other common styles */
+  }
+  
+  .button:hover {
+    transform: scale(1.1); /* Increase the size on hover */
+  }
+  
+  /* Specific styles for each button type */
+  #button-deleteProfile {
+    color: red;
+    border: 1px solid red;
+    background-color: white;
+  }
+  
+  #button-deleteProfile:hover {
+    background-color: red;
+    color: white;
+  }
+  
+  #button-editProfile {
+    background-color: #4169e1; /* Royal Blue */
+    color: white;
+  }
+  
+  #button-shareProfile{
+      transition: none;
+      transform: none;
+      padding: 0.3rem 1rem;
+  
+  }
+  
+  #DropBownBtn {
+    padding: 0.8rem 1.5rem;
+    border: 0.1rem solid blue;
+    background-color: white;
+    color: blue;
+    cursor: pointer;
+    margin: 1rem;
+    text-align: center;
+    font-size: medium;
+    border-radius: 2rem;
+  }
+  
