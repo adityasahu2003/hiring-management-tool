@@ -1,0 +1,54 @@
+/* Sidebar.css */
+.sidebar {
+    /* Sidebar styles */
+    width: 5rem;
+    height: 98vh;
+    border-radius: 0.6rem;
+    display: flex;
+    align-items: center;
+    padding: 1.2rem 1rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+    align-self: flex-start;
+    margin-left: 0.5rem;
+}
+
+.logo-container{
+    margin-bottom: 1rem;
+}
+
+.icon-container{
+    font-size: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* Middle icons styles */
+.middle-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* General icon styles */
+.icon-link {
+    color: black;
+    text-decoration: none;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+} 
+
+/* Text styles */
+.middle-icon-text{
+    /* Your text styles go here */
+    font-size: 0.7rem;
+    margin-top: 0.5rem;
+}
+
