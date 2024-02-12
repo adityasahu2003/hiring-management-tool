@@ -1,0 +1,6 @@
+.menu-interview{
+    padding: 10px 15px;
+    box-shadow: 0 -20px 30px rgba(0, 0, 0, 0.2); /* Add thicker shadow effect */
+    width: 200px;
+    border-radius: 10px; /* Add curved edges */
+}

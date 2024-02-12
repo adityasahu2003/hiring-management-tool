@@ -1,0 +1,21 @@
+.notify {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: #fff; /* Black background color */
+    color: #74C0FC; /* White text color */
+    border-radius: 50%;
+    font-size: 14px;
+    margin: 2px;
+
+}
+
+.notify:hover {
+    background-color: #eaf4fb; /* Darker black background color on hover */
+}
+
+.notify .icon {
+    margin-right: 4px;
+}
