@@ -85,7 +85,10 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <h1>Hiring Manager Tool......</h1> 
+
+        <div className="topbar-area">
+          <h1>Hiring Manager Tool......</h1>
+        </div>
 
         {/* <Button onClick={handleDeleteProfile} type="deleteProfile">
           Delete Profile
@@ -118,7 +121,7 @@ function App() {
           onSelect={handleDropdownSelect}
         />*/}
 
-{/* <Button onClick={handleDeleteProfile} type="deleteProfile">
+        {/* <Button onClick={handleDeleteProfile} type="deleteProfile">
           Delete Profile
         </Button>
 
