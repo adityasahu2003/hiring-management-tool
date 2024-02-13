@@ -11,7 +11,7 @@
     "dev-applicant": "nodemon applicant-service/src/app.js",
     "dev-hr": "nodemon hr-service/src/app.js",
     "dev-interviewer": "nodemon interviewer-service/src/app.js",
-    "dev-commmon": "nodemon common-service/src/app.js"
+    "dev-common": "nodemon common-service/src/app.js"
   },
   "keywords": [],
   "author": "",

@@ -1,50 +1,50 @@
 const Application = require('../models/Application');
 
-exports.getJobDetails = async (req, res) => {
+exports.getApplicationDetails = async (req, res) => {
     try {
-        const job = await Job.findOne({ _id: req.params.job_id });
-        if (!job) {
-            return res.status(404).json({ message: 'Job not found' });
+        const application = await Application.findOne({ _id: req.params.application_id });
+        if (!application) {
+            return res.status(404).json({ message: 'Application not found' });
         }
-        res.json(job);
+        res.json(application);
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
 };
 
-exports.updateJobDetails = async (req, res) => {
+exports.updateApplicationDetails = async (req, res) => {
     try {
-        const updatedJob = await Job.findOneAndUpdate(
-            { _id: req.params.job_id },
+        const updatedApplication = await Application.findOneAndUpdate(
+            { _id: req.params.application_id },
             req.body,
             { new: true }
         );
-        res.json(updatedJob);
+        res.json(updatedApplication);
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
 };
 
-exports.createJob = async (req, res) => {
+exports.createApplication = async (req, res) => {
     try {
-        const newJob = new Job(req.body);
-        await newJob.save();
+        const newApplication = new Application(req.body);
+        await newApplication.save();
         res.status(201).json({
-            message: 'Job posted successfully',
-            job: newJob
+            message: 'Application submitted successfully',
+            job: newApplication
         });
     } catch (error) {
         res.status(400).json({ message: error.message });
     }
 };
 
-exports.deleteJob = async (req, res) => {
+exports.deleteApplication = async (req, res) => {
     try {
-        const deletedJob = await Job.findOneAndDelete({ _id: req.params.job_id });
-        if (!deletedJob) {
-            return res.status(404).json({ message: 'Job not found' });
+        const deletedApplication = await Job.findOneAndDelete({ _id: req.params.application_id });
+        if (!deletedApplication) {
+            return res.status(404).json({ message: 'Application not found' });
         }
-        res.status(200).json({ message: 'Job deleted successfully' });
+        res.status(200).json({ message: 'Application deleted successfully' });
     } catch (error) {
         res.status(500).json({ message: error.message });
     }

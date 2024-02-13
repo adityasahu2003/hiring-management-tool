@@ -1,50 +1,50 @@
 const Interview = require('../models/Interview');
 
-exports.getJobDetails = async (req, res) => {
+exports.getInterviewDetails = async (req, res) => {
     try {
-        const job = await Job.findOne({ _id: req.params.job_id });
-        if (!job) {
-            return res.status(404).json({ message: 'Job not found' });
+        const interview = await Interview.findOne({ _id: req.params.interview_id });
+        if (!interview) {
+            return res.status(404).json({ message: 'Interview not found' });
         }
-        res.json(job);
+        res.json(interview);
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
 };
 
-exports.updateJobDetails = async (req, res) => {
+exports.updateInterviewDetails = async (req, res) => {
     try {
-        const updatedJob = await Job.findOneAndUpdate(
-            { _id: req.params.job_id },
+        const updatedInterview = await Interview.findOneAndUpdate(
+            { _id: req.params.interview_id },
             req.body,
             { new: true }
         );
-        res.json(updatedJob);
+        res.json(updatedInterview);
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
 };
 
-exports.createJob = async (req, res) => {
+exports.createInterview = async (req, res) => {
     try {
-        const newJob = new Job(req.body);
-        await newJob.save();
+        const newInterview = new Interview(req.body);
+        await newInterview.save();
         res.status(201).json({
-            message: 'Job posted successfully',
-            job: newJob
+            message: 'Interview created successfully',
+            interview: newInterview
         });
     } catch (error) {
         res.status(400).json({ message: error.message });
     }
 };
 
-exports.deleteJob = async (req, res) => {
+exports.deleteInterview = async (req, res) => {
     try {
-        const deletedJob = await Job.findOneAndDelete({ _id: req.params.job_id });
-        if (!deletedJob) {
-            return res.status(404).json({ message: 'Job not found' });
+        const deletedInterview = await Interview.findOneAndDelete({ _id: req.params.interview_id });
+        if (!deletedInterview) {
+            return res.status(404).json({ message: 'Interview not found' });
         }
-        res.status(200).json({ message: 'Job deleted successfully' });
+        res.status(200).json({ message: 'Interview deleted successfully' });
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
