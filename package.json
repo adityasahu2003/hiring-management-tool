@@ -9,7 +9,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev-applicant": "nodemon applicant-service/src/app.js",
-    "dev-hr": "nodemon hr-service/src/app.js"
+    "dev-hr": "nodemon hr-service/src/app.js",
+    "dev-interviewer": "nodemon interviewer-service/src/app.js"
   },
   "keywords": [],
   "author": "",
