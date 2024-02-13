@@ -2,7 +2,7 @@ const Hr = require('../models/Hr');
 
 exports.getHrProfile = async (req, res) => {
   try {
-    const hr = await Hr.findOne({ user_email_id: req.params.email });
+    const hr = await Hr.findOne({ work_email_id: req.params.email });
     if (!hr) {
       return res.status(404).json({ message: 'HR not found' });
     }
@@ -31,7 +31,7 @@ exports.createHr = async (req, res) => {
       await newHr.save();
       res.status(201).json({
         message: 'HR registered successfully',
-        HR: newHr
+        hr: newHr
       });
     } catch (error) {
       res.status(400).json({ message: error.message });
