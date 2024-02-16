@@ -14,9 +14,9 @@ const jobSchema = new mongoose.Schema({
   },
   number_of_openings: Number,
   last_date_to_apply: Date,
-  job_tag: { type: String, enum: ['frontend', 'backend', 'full-stack', 'devops', 'cloud', 'sre', 'product', 'management', 'helpdesk/support', 'hr', 'ai/ml', 'testing/qa']},
+  job_tag: [String],
   job_type: { type: String, enum: ['fulltime', 'parttime', 'internship'] },
-  skill_tag: { type: String, enum: ['c/c++', 'java', 'python', 'product-management', 'powerbi', 'php', 'ruby-on-rails', 'ml', 'open-cv', 'human-resource', 'javascript', 'aws', 'gcp', 'docker', 'kubernetes'] },
+  skill_tag: [String],
   experience_level: { type: String, enum: ['entry', 'mid', 'senior'] },
   number_of_rounds: Number
 }, { timestamps: true });
